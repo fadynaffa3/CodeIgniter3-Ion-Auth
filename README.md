@@ -1,4 +1,7 @@
-#Ion Auth 2
+#Ion Auth 2 With codeigniter 3 and bootstrap
+
+### This is still not complete project but you can install it and start with it as bootstrap based auth ###
+
 ###The future of authentication
 by [Ben Edmunds](http://benedmunds.com)
 
@@ -17,17 +20,11 @@ Just copy the files from this package to the corresponding folder in your
 application folder.  For example, copy Ion_auth/config/ion_auth.php to
 application/config/ion_auth.php.
 
-  
-###Relational DB Setup
-Then just run the appropriate SQL file (if you're using migrations you can
-get the migrations from JD here:
-https://github.com/iamfiscus/codeigniter-ion-auth-migration).
 
-##Usage
-In the package you will find example usage code in the controllers and views
-folders.  The example code isn't the most beautiful code you'll ever see but
-it'll show you how to use the library and it's nice and generic so it doesn't
-require a MY_controller or anything else.
+###Relational DB Setup
+
+go to url yourapp/rake/migrate and the migration file will be installed by itself
+
 
 ###Default Login
 Username: admin@admin.com
@@ -48,5 +45,5 @@ Feel free to send me an email if you have any problems.
 
 Thanks,
 -Ben Edmunds
- ben.edmunds@gmail.com
- @benedmunds
+ben.edmunds@gmail.com
+@benedmunds
