@@ -12,18 +12,18 @@
     <th><?php echo t('action');?></th>
   </tr>
   <?php foreach ($users as $user):?>
-    <tr>
-      <td><?php echo $user->first_name;?></td>
-      <td><?php echo $user->last_name;?></td>
-      <td><?php echo $user->email;?></td>
-      <td>
-        <?php foreach ($user->groups as $group):?>
-          <?php echo anchor("auth/edit_group/".$group->id, $group->name) ;?><br />
-                <?php endforeach?>
-      </td>
-      <td><?php echo ($user->active) ? anchor("auth/deactivate/".$user->id, t('deactivate')) : anchor("auth/activate/". $user->id, t('activate'));?></td>
-      <td><?php echo anchor("auth/edit_user/".$user->id, 'Edit') ;?></td>
-    </tr>
+  <tr>
+    <td><?php echo $user->first_name;?></td>
+    <td><?php echo $user->last_name;?></td>
+    <td><?php echo $user->email;?></td>
+    <td>
+      <?php foreach ($user->groups as $group):?>
+      <?php echo anchor("auth/edit_group/".$group->id, $group->name) ;?><br />
+      <?php endforeach?>
+    </td>
+    <td><?php echo ($user->active) ? anchor("auth/deactivate/".$user->id, t('deactivate')) : anchor("auth/activate/". $user->id, t('activate'));?></td>
+    <td><?php echo anchor("auth/edit_user/".$user->id, 'Edit') ;?></td>
+  </tr>
   <?php endforeach;?>
 </table>
 

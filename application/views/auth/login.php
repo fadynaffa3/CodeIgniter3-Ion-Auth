@@ -14,7 +14,7 @@
     </div>
 
     <div class="form-group">
-      <?php echo t('remember');?>
+      <label for="remember"><?php echo t('remember');?></label>
       <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
     </div>
 
