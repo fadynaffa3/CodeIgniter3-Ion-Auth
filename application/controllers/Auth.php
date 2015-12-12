@@ -41,7 +41,6 @@ class Auth extends CI_Controller {
       {
         $this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
       }
-
       $this->data['content'] = 'auth/index';
       $this->load->view('layouts/main', $this->data);
     }
@@ -205,7 +204,8 @@ class Auth extends CI_Controller {
 
       //set any errors and display the form
       $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-      $this->_render_page('auth/forgot_password', $this->data);
+      $this->data['content'] = 'auth/forgot_password';
+      $this->load->view('layouts/main', $this->data);
     }
     else
     {
@@ -496,8 +496,8 @@ class Auth extends CI_Controller {
         'value' => $this->form_validation->set_value('password_confirm'),
         'class' => 'form-control'
       );
-
-      $this->_render_page('auth/create_user', $this->data);
+      $this->data['content'] = 'auth/create_user';
+      $this->load->view('layouts/main', $this->data);
     }
   }
 
@@ -632,8 +632,8 @@ class Auth extends CI_Controller {
       'type' => 'password',
       'class' => 'form-control'
     );
-
-    $this->_render_page('auth/edit_user', $this->data);
+    $this->data['content'] = 'auth/edit_user';
+    $this->load->view('layouts/main', $this->data);
   }
 
   // create a new group
@@ -672,6 +672,7 @@ class Auth extends CI_Controller {
         'id'    => 'group_name',
         'type'  => 'text',
         'value' => $this->form_validation->set_value('group_name'),
+        'class' => 'form-control'
       );
       $this->data['description'] = array(
         'name'  => 'description',
@@ -680,8 +681,8 @@ class Auth extends CI_Controller {
         'value' => $this->form_validation->set_value('description'),
         'class' => 'form-control'
       );
-
-      $this->_render_page('auth/create_group', $this->data);
+      $this->data['content'] = 'auth/create_group';
+      $this->load->view('layouts/main', $this->data);
     }
   }
 
@@ -745,8 +746,8 @@ class Auth extends CI_Controller {
       'value' => $this->form_validation->set_value('group_description', $group->description),
       'class' => 'form-control'
     );
-
-    $this->_render_page('auth/edit_group', $this->data);
+    $this->data['content'] = 'auth/edit_group';
+    $this->load->view('layouts/main', $this->data);
   }
 
 
