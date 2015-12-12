@@ -1,7 +1,5 @@
 #Ion Auth 2 With codeigniter 3 and bootstrap
 
-### This is still not complete project but you can install it and start with it as bootstrap based auth ###
-
 ## add helpers and libraries in autoload ##
 
 ###The future of authentication
